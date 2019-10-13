@@ -77,6 +77,22 @@ Feature: This is a my test for karate
       | 1  | user1 |
       | 2  | user2 |
 
+  Scenario Outline: 这是一个关于汉语支持程度的测试
+#     从当前测试出的结果来看，变量名不能使用汉语，但是在 Example 中可以使用汉语，并且能成功替换，测试名字也可以是汉语的
+    * def json =
+    """
+    {
+      编号: <编号>,
+      名字: "<名字>"
+    }
+    """
+    * match json == {编号: '#number? _ < 10', 名字: '#string? _.length >= 3'}
+
+    Examples:
+      | 编号 | 名字  |
+      | 1  | 用户1 |
+      | 2  | 用户2 |
+
   Scenario: This is a test for `replace` keyword
 #    if you want to use 'replace' keyword you need to match the text first, and then use quote if you want to replace it with string
     * def text = 'hello <one> world ${two} bye <three>'
