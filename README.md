@@ -1,6 +1,6 @@
 # Karate for coaching
 ## 一、使用工具、依赖
-1. karate
+1. [karate](https://intuit.github.io/karate/)
 2. junit 5
 3. cucumber report
 
@@ -23,7 +23,20 @@
 6. 要与团队合作紧密
 7. etc.
 
-## 附1：目录结构
+## 附1：新建项目
+如果想新建一个项目，可使用命令：
+```shell script
+mvn archetype:generate \
+-DarchetypeGroupId=com.intuit.karate \
+-DarchetypeArtifactId=karate-archetype \
+-DarchetypeVersion=0.9.4 \
+-DgroupId=com.mycompany \
+-DartifactId=myproject
+```
+但是，本身构建出的项目在运行测试时会报错，这是因为 pom 文件并没有完全配置好
+详情请见：[‘mvn test’ doesn’t run tests · Issue #823 · intuit/karate · GitHub](https://github.com/intuit/karate/issues/823)
+
+## 附2：目录结构
 .
 ├── main
 │   ├── java
