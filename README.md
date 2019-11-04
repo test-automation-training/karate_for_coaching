@@ -37,7 +37,7 @@ mvn archetype:generate \
 详情请见：[‘mvn test’ doesn’t run tests · Issue #823 · intuit/karate · GitHub](https://github.com/intuit/karate/issues/823)
 
 ## 附2：目录结构
-.
+```.
 ├── main
 │   ├── java
 │   └── resources
@@ -53,3 +53,4 @@ mvn archetype:generate \
         │       ├── UsersRunner.java
         │       └── users.feature
         └── karate-config.js
+```
