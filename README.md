@@ -1,5 +1,8 @@
 # Karate for coaching
+## 前言
+推荐使用 IDE：Intellij IDEA
 ## 一、使用工具、依赖
+使用 Maven 管理依赖
 1. [karate](https://intuit.github.io/karate/)
 2. junit 5
 3. cucumber report
@@ -13,15 +16,6 @@
 2. users 包下包含了两个连接 jsonplaceholder 进行 mock api 测试的连通示例
 
 ⚠️注意：测试 users 案例是请连接网络
-
-## 四、规范
-1. 团队统一命名规范并对案例保持维护
-2. 请使用合理命名的方式对你的测试案例命名，如 `example_name_for_test_case` 或 `exampleNameForTestCase`
-3. 每次提交前都要保证自己的测试是可以通过的
-4. 写测试案例时请勿使用你电脑中的绝对路径
-5. 时刻关注团队的 CI 构建、测试情况
-6. 要与团队合作紧密
-7. etc.
 
 ## 附1：新建项目
 如果想新建一个项目，可使用命令：
