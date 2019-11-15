@@ -7,15 +7,15 @@
 
 ### 2. 技术方向
 
-1. 保证接口返回HTTP Code符合标准定义。详情参见[Http状态码说明](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status)。
-2. 参数有取值范围时需要设计[边界条件](https://baike.baidu.com/item/%E8%BE%B9%E7%95%8C%E5%80%BC%E6%B5%8B%E8%AF%95/2511553?fr=aladdin)案例。
+1. 保证接口返回HTTP Code符合标准定义。具体详情参见[Http状态码说明](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status)。
+2. 参数有取值范围时需要设计[边界条件](https://baike.baidu.com/item/%E8%BE%B9%E7%95%8C%E5%80%BC%E6%B5%8B%E8%AF%95/2511553?fr=aladdin)案例。具体案例设计方法参考[边界条件](https://baike.baidu.com/item/%E8%BE%B9%E7%95%8C%E5%80%BC%E6%B5%8B%E8%AF%95/2511553?fr=aladdin)方法
 3. 参数中有限取值参数，如布尔型，枚举型等。需要分析等价类并针对性设计案例。
 
 * 例如:有接口参数1表示普通用户，0表示vip用户，那么需要判断不同用户类型对测试路径以及功能的影响，是否两种用户属于等价状况，或是分别都需要测试。
 
-4. 需要考虑空值的情况。
-5. API测试断言完整，需要判断除返回code之外必要的值。
-6. 上述所有条件的组合，在符合业务含义的情况下应适当考虑组合测试。
+4. 需要考虑空值的情况，参数是否可以为空，如果为空时验证正确的反馈。
+5. API测试断言完整，需要判断除返回code之外必要的值。比如：response body中有意义的项值。
+6. 上述所有条件的组合，在符合业务含义的情况下应适当考虑组合测试。组合爆炸的情况下可以尝试使用[pire wise](http://www.pairwise.org/)方法精简案例。
 
 ## 二、代码实现
 ### 1. 依赖管理
